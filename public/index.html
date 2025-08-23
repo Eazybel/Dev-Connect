@@ -1,0 +1,180 @@
+<!DOCTYPE-html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Connect</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLwFjbcS8Fm8qjC6z8j0a7W3W7DqN3+d9Ff7vFjXyW15z+zK9B1I1i4Qy9B5dG0QcR1/p2s+1zJ2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 min-h-screen p-4 sm:p-8">
+
+    <!-- Main container with some padding -->
+    <div class="container mx-auto">
+
+        <!-- Header Section -->
+        <header class="flex justify-between items-center py-4 mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 tracking-tight">Dev Connect</h1>
+            <button class="bg-green-600 hover:bg-blue-700 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-full shadow-lg transition-colors duration-200 ease-in-out transform hover:scale-105">
+               Log-in/Sign-up 
+            </button>
+        </header>
+
+        <!-- Profile Cards Section -->
+        <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <!-- Profile Image Placeholder -->
+                <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden mb-4 border-4 border-white shadow-md">
+                    <img src="https://placehold.co/96x96/60A5FA/FFFFFF?text=JP" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-1">John Paul</h2>
+                <span class="text-sm font-medium text-blue-600 mb-2">Full Stack Developer</span>
+                
+                <div class="w-full text-left mt-2">
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Tech Stack:</span> React, Node.js, Express, MongoDB
+                    </p>
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Experience:</span> 5 years
+                    </p>
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Phone:</span> +123 456 7890
+                    </p>
+                </div>
+                
+                <!-- Links & Download Button -->
+                <div class="flex justify-center space-x-4 mt-4 mb-4">
+                    <a href="#" class="text-gray-500 hover:text-gray-800 transition-colors duration-200" aria-label="GitHub Profile">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-800 transition-colors duration-200" aria-label="Portfolio">
+                        <i class="fa-solid fa-briefcase text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors duration-200" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+                <button class="bg-blue-600 text-white font-medium py-2 px-6 rounded-full shadow-lg transition-colors duration-200 ease-in-out hover:bg-blue-700 transform hover:scale-105 w-full">
+                    See Full Profile
+                </button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden mb-4 border-4 border-white shadow-md">
+                    <img src="https://placehold.co/96x96/10B981/FFFFFF?text=SJ" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-1">Sarah Johnson</h2>
+                <span class="text-sm font-medium text-green-600 mb-2">Frontend Developer</span>
+
+                <div class="w-full text-left mt-2">
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Tech Stack:</span> React, TypeScript, Tailwind CSS, SASS
+                    </p>
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Experience:</span> 3 years
+                    </p>
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Phone:</span> +123 987 6543
+                    </p>
+                </div>
+
+                <div class="flex justify-center space-x-4 mt-4 mb-4">
+                    <a href="#" class="text-gray-500 hover:text-gray-800 transition-colors duration-200" aria-label="GitHub Profile">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-800 transition-colors duration-200" aria-label="Portfolio">
+                        <i class="fa-solid fa-briefcase text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors duration-200" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+                <button class="bg-blue-600 text-white font-medium py-2 px-6 rounded-full shadow-lg transition-colors duration-200 ease-in-out hover:bg-blue-700 transform hover:scale-105 w-full">
+                    See Full Profile
+                </button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden mb-4 border-4 border-white shadow-md">
+                    <img src="https://placehold.co/96x96/F97316/FFFFFF?text=MK" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-1">Michael Kim</h2>
+                <span class="text-sm font-medium text-orange-600 mb-2">Backend Developer</span>
+
+                <div class="w-full text-left mt-2">
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Tech Stack:</span> Python, Django, PostgreSQL, Docker
+                    </p>
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Experience:</span> 8 years
+                    </p>
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Phone:</span> +123 123 4567
+                    </p>
+                </div>
+
+                <div class="flex justify-center space-x-4 mt-4 mb-4">
+                    <a href="#" class="text-gray-500 hover:text-gray-800 transition-colors duration-200" aria-label="GitHub Profile">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-800 transition-colors duration-200" aria-label="Portfolio">
+                        <i class="fa-solid fa-briefcase text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors duration-200" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+                <button class="bg-blue-600 text-white font-medium py-2 px-6 rounded-full shadow-lg transition-colors duration-200 ease-in-out hover:bg-blue-700 transform hover:scale-105 w-full">
+                    See Full Profile
+                </button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+                <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden mb-4 border-4 border-white shadow-md">
+                    <img src="https://placehold.co/96x96/EF4444/FFFFFF?text=EL" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-1">Emily Lee</h2>
+                <span class="text-sm font-medium text-red-600 mb-2">UI/UX Designer</span>
+                
+                <div class="w-full text-left mt-2">
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Tech Stack:</span> Figma, Sketch, Adobe XD, Prototyping
+                    </p>
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Experience:</span> 2 years
+                    </p>
+                    <p class="text-gray-600 text-sm mb-1">
+                        <span class="font-medium text-gray-700">Phone:</span> +123 765 4321
+                    </p>
+                </div>
+
+                <div class="flex justify-center space-x-4 mt-4 mb-4">
+                    <a href="#" class="text-gray-500 hover:text-gray-800 transition-colors duration-200" aria-label="GitHub Profile">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-800 transition-colors duration-200" aria-label="Portfolio">
+                        <i class="fa-solid fa-briefcase text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition-colors duration-200" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+                <button class="bg-blue-600 text-white font-medium py-2 px-6 rounded-full shadow-lg transition-colors duration-200 ease-in-out hover:bg-blue-700 transform hover:scale-105 w-full">
+                    See Full Profile
+                </button>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>

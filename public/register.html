@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome from CDN for the icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLwFjbcS8Fm8qjC6z8j0a7W3W7DqN3+d9Ff7vFjXyW15z+zK9B1I1i4Qy9B5dG0QcR1/p2s+1zJ2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input[type="file"]::file-selector-button {
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            background-color: #60a5fa;
+            font-weight: 500;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        input[type="file"]::file-selector-button:hover {
+            background-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Registration Card Container -->
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-lg transform transition-all duration-300 ease-in-out hover:scale-[1.01] hover:shadow-3xl">
+        <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Create Your Dev Profile</h2>
+        <!-- Divider -->
+        <div class="relative flex items-center py-5">
+            <div class="flex-grow border-t border-gray-300"></div>
+            <span class="flex-shrink mx-4 text-gray-500 text-sm">fill out the form below</span>
+            <div class="flex-grow border-t border-gray-300"></div>
+        </div>
+
+        <!-- Registration Form -->
+        <form action="#" method="POST" class="space-y-4">
+            <!-- Profile Photo -->
+            <div>
+                <label for="profile-photo" class="block text-sm font-medium text-gray-700 mb-1">Profile Photo</label>
+                <input id="profile-photo" name="profile-photo" type="file" class="block w-full text-gray-500">
+            </div>
+
+            <!-- Name and Email -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 sr-only">Full Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Full Name">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 sr-only">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Email address">
+            </div>
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 sr-only">Phone Number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Phone Number (Optional)">
+            </div>
+            
+            <!-- Tech Skills and Experience -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="tech-skills" class="block text-sm font-medium text-gray-700 mb-1">Tech Skills</label>
+                    <select id="tech-skills" name="tech-skills" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <option value="">Select a skill...</option>
+                        <option value="react">React</option>
+                        <option value="python">Python</option>
+                        <option value="nodejs">Node.js</option>
+                        <option value="django">Django</option>
+                        <option value="figma">Figma</option>
+                        <option value="ui/ux">UI/UX Design</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="experience" class="block text-sm font-medium text-gray-700 mb-1">Experience</label>
+                    <select id="experience" name="experience" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <option value="">Select experience...</option>
+                        <option value="entry">Entry-level</option>
+                        <option value="1-3">1-3 years</option>
+                        <option value="3-5">3-5 years</option>
+                        <option value="5+">5+ years</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+                <label for="github-url" class="block text-sm font-medium text-gray-700 sr-only">GitHub URL</label>
+                <div class="relative rounded-lg shadow-sm">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fab fa-github text-gray-400"></i>
+                    </div>
+                    <input id="github-url" name="github-url" type="url" class="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="GitHub URL (Optional)">
+                </div>
+            </div>
+            <div>
+                <label for="portfolio-url" class="block text-sm font-medium text-gray-700 sr-only">Portfolio URL</label>
+                <div class="relative rounded-lg shadow-sm">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-briefcase text-gray-400"></i>
+                    </div>
+                    <input id="portfolio-url" name="portfolio-url" type="url" class="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Portfolio URL (Optional)">
+                </div>
+            </div>
+            <div>
+                <label for="linkedin-url" class="block text-sm font-medium text-gray-700 sr-only">LinkedIn URL</label>
+                <div class="relative rounded-lg shadow-sm">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fab fa-linkedin text-gray-400"></i>
+                    </div>
+                    <input id="linkedin-url" name="linkedin-url" type="url" class="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="LinkedIn URL (Optional)">
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 sr-only">Password</label>
+                <input id="password" name="password" type="password" autocomplete="new-password" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Password">
+            </div>
+
+            <div class="mt-6">
+                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Create Profile
+                </button>
+            </div>
+        </form>
+
+        <!-- Login Link -->
+        <div class="mt-6 text-center text-sm text-gray-600">
+            Already have an account? 
+            <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
+                Sign in here
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
