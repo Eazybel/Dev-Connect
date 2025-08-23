@@ -1,6 +1,35 @@
 const mongoose=require("mongoose")
 const devSchema=mongoose.Schema({
-    name:String
+    name:{
+        type:String,
+        require:true
+    },
+    stack:{
+        type:String,
+        require:true
+    },
+    skill:{
+        type:[String],
+        require:true
+    },
+    experiance:{
+        type:Number,
+        require:true
+    },
+    phone:{
+        type:String,
+        require:true
+    },
+     url:{
+        type:String,
+    },
+     github:{
+        type:String,
+    },
+     linkedin:{
+        type:String,
+    }
+    
 })
 const devModel=mongoose.model("devModel",devSchema,"Users")
-module.exports={devModel}
+module.exports=devModel

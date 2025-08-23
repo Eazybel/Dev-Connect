@@ -6,10 +6,12 @@ const register=require("./controller/register")
 const app=express()
 require("dotenv").config()
 app.use(express.json())
+app.use(express.static(path.join(__dirname,"./public"),{index:false}))
 mongoose.connect(process.env.STRING)
 .then(()=>{
     console.log("connected to db sucessfully")
 })
+
 
 app.get("/",render)
 app.post("/",register)
