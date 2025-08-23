@@ -11,8 +11,6 @@ mongoose.connect(process.env.STRING)
 .then(()=>{
     console.log("connected to db sucessfully")
 })
-
-
 app.get("/",render)
 app.post("/",register)
 app.listen(5000,()=>{

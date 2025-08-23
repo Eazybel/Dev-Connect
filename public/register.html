@@ -25,7 +25,7 @@
         </div>
 
         <!-- Registration Form -->
-        <form action="#" method="POST" class="space-y-4">
+        <form class="space-y-4">
             <!-- Profile Photo -->
             <div>
                 <label for="profile-photo" class="block text-sm font-medium text-gray-700 mb-1">Profile Photo</label>
@@ -35,29 +35,45 @@
             <!-- Name and Email -->
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 sr-only">Full Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Full Name">
+                <input id="name" name="name" type="text" autocomplete="name"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Full Name">
             </div>
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700 sr-only">Email address</label>
-                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Email address">
+                <input id="email" name="email" type="email" autocomplete="email"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Email address">
+            </div>
+            <div>
+                <label for="pass1" class="block text-sm font-medium text-gray-700 sr-only">Password</label>
+                <input id="pass1" name="pass1" type="password" autocomplete="password"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Password">
+            </div>
+            <div>
+                <label for="pass2" class="block text-sm font-medium text-gray-700 sr-only">Confirm Passwor</label>
+                <input id="pass2" name="pass2" type="password" autocomplete="password"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Confirm Password">
             </div>
             <div>
                 <label for="phone" class="block text-sm font-medium text-gray-700 sr-only">Phone Number</label>
                 <input id="phone" name="phone" type="tel" autocomplete="tel" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Phone Number (Optional)">
             </div>
-            
             <!-- Tech Skills and Experience -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <label for="tech-skills" class="block text-sm font-medium text-gray-700 mb-1">Tech Skills</label>
-                    <select id="tech-skills" name="tech-skills" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
-                        <option value="">Select a skill...</option>
-                        <option value="react">React</option>
-                        <option value="python">Python</option>
-                        <option value="nodejs">Node.js</option>
-                        <option value="django">Django</option>
-                        <option value="figma">Figma</option>
-                        <option value="ui/ux">UI/UX Design</option>
+                    <label for="stack" class="block text-sm font-medium text-gray-700 mb-1">Tech Skills</label>
+                    <select id="stack" name="stack" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                       <option value="">Select a stack...</option>
+                        <option value="mern">MERN (MongoDB, Express, React, Node.js)</option>
+                        <option value="mean">MEAN (MongoDB, Express, Angular, Node.js)</option>
+                        <option value="lamp">LAMP (Linux, Apache, MySQL, PHP)</option>
+                        <option value="jamstack">Jamstack (JavaScript, APIs, Markup)</option>
+                        <option value="django">Django + PostgreSQL</option>
+                        <option value="rails">Ruby on Rails</option>
+                        <option value="springboot">Spring Boot + Java</option>
+                        <option value="nextjs">Next.js</option>
+                        <option value="nuxtjs">Nuxt.js</option>
+                        <option value="flutter-firebase">Flutter + Firebase</option>
+                        <option value="react-native">React Native</option>
+                        <option value="sveltekit">SvelteKit</option>
+                        <option value="aspnet">ASP.NET Core</option>
+                        <option value="graphql-apollo">GraphQL + Apollo</option>
+                        <option value="t3">T3 Stack (Next.js, TypeScript, Tailwind, tRPC)</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
@@ -103,13 +119,8 @@
             </div>
 
             <!-- Password -->
-            <div>
-                <label for="password" class="block text-sm font-medium text-gray-700 sr-only">Password</label>
-                <input id="password" name="password" type="password" autocomplete="new-password" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Password">
-            </div>
-
             <div class="mt-6">
-                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <button id="btn" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Create Profile
                 </button>
             </div>
@@ -123,6 +134,6 @@
             </a>
         </div>
     </div>
-
+<script type="module" src="register.js"></script>
 </body>
 </html>

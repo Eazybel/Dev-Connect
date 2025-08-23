@@ -1,14 +1,15 @@
-const devModel=require("../schema/schima")
+const devModel=require("../schema/schema")
 const register=async(req,res)=>{
 const user=new devModel({
-    name:"ezedin",
-    stack:"ezedin",
-    skill:"5",
-    experiance:5,
-    phone:5,
-    url:"5555",
-    github:"5555",
-    linkedin:"5555"
+        name:req.body.name,
+        email:req.body.email,
+        password:req.body.password,
+        phone:req.body.phone,
+        stack:req.body.stack,
+        experience:req.body.experience,
+        github:req.body.github,
+        url:req.body.url,
+        linkedin:req.body.linkedin
 })
 user.save()
 .then(()=>{

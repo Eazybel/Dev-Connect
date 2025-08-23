@@ -4,12 +4,16 @@ const devSchema=mongoose.Schema({
         type:String,
         require:true
     },
-    stack:{
+    email:{
         type:String,
         require:true
     },
-    skill:{
-        type:[String],
+    password:{
+        type:String,
+        require:true
+    },
+    stack:{
+        type:String,
         require:true
     },
     experiance:{
