@@ -54,5 +54,5 @@ fetch("/",{
 }).catch(err=>{
     console.log(err)
 })
-conosle.log(email,password)
+
 }

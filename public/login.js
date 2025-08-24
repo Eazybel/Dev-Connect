@@ -26,24 +26,5 @@ signInWithEmailAndPassword(auth, email, password)
     const errorCode = error.code;
     const errorMessage = error.message;
   });
-// fetch("/",{
-//     method:"POST",
-//     headers:{"content-type":"application/json"},
-//     body:JSON.stringify({
-//         name:name,
-//         email:email,
-//         password:password,
-//         phone:phone,
-//         stack:stack,
-//         experience:experience,
-//         github:github,
-//         url:url,
-//         linkedin:linkedin
-//     })
-// })
-// .then(()=>{
-//     window.location="./login.html"
-// }).catch(err=>{
-//     console.log(err)
-// })
+
 }

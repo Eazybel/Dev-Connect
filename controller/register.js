@@ -14,7 +14,9 @@ const user=new devModel({
 user.save()
 .then(()=>{
     console.log("saved")
+}).catch(err=>{
+    console.log(err)
 })
-res.send("sucess")
+res.status(200).send("sucess")
 }
 module.exports=register

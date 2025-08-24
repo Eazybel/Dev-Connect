@@ -5,6 +5,6 @@ app.use(express.json())
 const devModel=require("../schema/schema")
 const user=async(req,res,params)=>{
         const user=await devModel.findOne({email:req.params.email})
-res.json(user)
+res.status(200).json(user)
 }
 module.exports=user
