@@ -27,6 +27,7 @@ createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     const user = userCredential.user;
     alert("Registered Sucessfully")
+    window.location="./login.html"
    
   })
   .catch((error) => {
@@ -53,4 +54,5 @@ fetch("/",{
 }).catch(err=>{
     console.log(err)
 })
+conosle.log(email,password)
 }

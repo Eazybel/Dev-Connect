@@ -1,4 +1,6 @@
+const devModel=require("../schema/schema")
 const test=async(req,res)=>{
-    res.json(req.body)
+  const users= await devModel.find()
+  res.send(users.length)
 }
 module.exports=test
