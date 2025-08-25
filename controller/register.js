@@ -17,6 +17,6 @@ user.save()
 }).catch(err=>{
     console.log(err)
 })
-res.status(200).send("sucess")
+res.status(200).json(req.body)
 }
 module.exports=register

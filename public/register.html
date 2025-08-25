@@ -35,29 +35,29 @@
             <!-- Name and Email -->
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 sr-only">Full Name</label>
-                <input id="name" name="name" type="text" autocomplete="name"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Full Name">
+                <input id="name" name="name" type="text" autocomplete="name" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="ex. John Doe">
             </div>
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700 sr-only">Email address</label>
-                <input id="email" name="email" type="email" autocomplete="email"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Email address">
+                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Email address">
             </div>
             <div>
                 <label for="pass1" class="block text-sm font-medium text-gray-700 sr-only">Password</label>
-                <input id="pass1" name="pass1" type="password" autocomplete="password"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Password">
+                <input id="pass1" name="pass1" type="password" autocomplete="password"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required placeholder="Password">
             </div>
             <div>
                 <label for="pass2" class="block text-sm font-medium text-gray-700 sr-only">Confirm Passwor</label>
-                <input id="pass2" name="pass2" type="password" autocomplete="password"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Confirm Password">
+                <input id="pass2" name="pass2" type="password" autocomplete="password"  class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required placeholder="Confirm Password">
             </div>
             <div>
                 <label for="phone" class="block text-sm font-medium text-gray-700 sr-only">Phone Number</label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Phone Number (Optional)">
+                <input id="phone" name="phone" type="tel" autocomplete="tel" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required placeholder="Phone Number (Optional)">
             </div>
-            <!-- Tech Skills and Experience -->
+            <!-- Tech Skills and experience -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                     <label for="stack" class="block text-sm font-medium text-gray-700 mb-1">Tech Skills</label>
-                    <select id="stack" name="stack" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <select id="stack" name="stack" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
                        <option value="">Select a stack...</option>
                         <option value="mern">MERN (MongoDB, Express, React, Node.js)</option>
                         <option value="mean">MEAN (MongoDB, Express, Angular, Node.js)</option>
@@ -78,8 +78,8 @@
                     </select>
                 </div>
                 <div>
-                    <label for="experience" class="block text-sm font-medium text-gray-700 mb-1">Experience</label>
-                    <select id="experience" name="experience" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <label for="experience" class="block text-sm font-medium text-gray-700 mb-1">experience</label>
+                    <select id="experience" name="experience" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
                         <option value="">Select experience...</option>
                         <option value="entry">Entry-level</option>
                         <option value="1-3">1-3 years</option>

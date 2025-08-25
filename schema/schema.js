@@ -16,8 +16,8 @@ const devSchema=mongoose.Schema({
         type:String,
         require:true
     },
-    experiance:{
-        type:Number,
+    experience:{
+        type:String,
         require:true
     },
     phone:{

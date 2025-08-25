@@ -29,7 +29,7 @@ const userCard=`
                         <span  class="font-medium text-gray-700">Tech Stack:</span> 
                     </p>
                     <p id="experience" class="text-gray-600 text-sm mb-1">
-                        <span  class="font-medium text-gray-700">Experience:</span>
+                        <span  class="font-medium text-gray-700">experience:</span>
                     </p>
                     <p id="phone" class="text-gray-600 text-sm mb-1">
                         <span  class="font-medium text-gray-700">Phone:</span> 
@@ -62,35 +62,47 @@ onAuthStateChanged(auth, (user) => {
      btn.onclick=()=>{
             window.location="./profile.html"
         }
+        fetch("https://www.thecolorapi.com/id?hex=700002")
+        .then(res=>{
+            return res.json()
+        })
+        .then(data=>{
+           var color=data.hex.value
+        })
         fetch("/api")
       .then(res=>{
        return res.json()
     }).then(data=>{
             for (let i = 0; i < data.length; i++) {
-                 main.insertAdjacentHTML("beforeend",userCard)
-            const name=document.querySelectorAll("#name")
-            const image=document.querySelectorAll("#image")
-            const title=document.querySelectorAll("#title")
-            const email=document.querySelectorAll("#email")
-            const skills=document.querySelectorAll("#skills")
-            const experience=document.querySelectorAll("#experience")
-            const phone=document.querySelectorAll("#phone")
+                main.insertAdjacentHTML("beforeend",userCard)
+                const name=document.querySelectorAll("#name")
+                const image=document.querySelectorAll("#image")
+                const title=document.querySelectorAll("#title")
+                const email=document.querySelectorAll("#email")
+                const skills=document.querySelectorAll("#skills")
+                const experience=document.querySelectorAll("#experience")
+                const phone=document.querySelectorAll("#phone")
             const github=document.querySelectorAll("#github")
             const url=document.querySelectorAll("#url")
             const linkedin=document.querySelectorAll("#linkedin")
-           
+            fetch("https://www.thecolorapi.com/random?format=json")
+              .then(res=>{
+                  return res.json()
+              })
+              .then(data=>{
+               let nameInitial=name[i].innerText.split(" ")
+                nameInitial=nameInitial[0][0]+nameInitial[1][0]
+                image[i].setAttribute("src",`https://placehold.co/96x96/${data.hex.clean}/FFFFFF?text=${nameInitial}`)
+              })
+            
             name[i].innerText=data[i].name
             email[i].innerText+=" "+data[i].email
             skills[i].innerText+=" "+data[i].stack
             phone[i].innerText+=" "+data[i].phone
-            experience[i].innerText+=" "+data[i].experiance+" year/s"
+            experience[i].innerText+=" "+data[i].experience+" year/s"
             github[i].setAttribute("href",data[i].github)
             url[i].setAttribute("href",data[i].url)
             linkedin[i].setAttribute("href",data[i].linkedin)
-             let nameInitial=name[i].innerText.split(" ")
-                nameInitial=nameInitial[0][0]+nameInitial[1][0]
-                image[i].setAttribute("src",`https://placehold.co/96x96/60A5FA/FFFFFF?text=${nameInitial}`)
-
             }
       }).catch(err=>{
         console.log(err)
@@ -118,7 +130,7 @@ onAuthStateChanged(auth, (user) => {
             email[i].innerText+=" "+data[i].email
             skills[i].innerText+=" "+data[i].stack
             phone[i].innerText+=" "+data[i].phone
-            experience[i].innerText+=" "+data[i].experiance+" year/s"
+            experience[i].innerText+=" "+data[i].experience+" year/s"
             github[i].setAttribute("href",data[i].github)
             url[i].setAttribute("href",data[i].url)
             linkedin[i].setAttribute("href",data[i].linkedin)

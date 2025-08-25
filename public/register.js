@@ -22,11 +22,28 @@ const experience=document.getElementById("experience").value
 const github=document.getElementById("github-url").value
 const url=document.getElementById("portfolio-url").value
 const linkedin=document.getElementById("linkedin-url").value
-    const auth = getAuth();
+if (pass1!==password) {
+ return alert("Password Missmatch")
+}
+const validators = {
+  email: /^[\w.-]+@[\w.-]+\.\w{2,}$/,
+  password: /^.{6,}$/,
+  phone: /^\+?\d{10,15}$/,
+};
+const userInputs = {
+  email: email,
+  password: password,
+  phone: phone,
+};
+for (let key in userInputs) {
+  const isValid = validators[key].test(userInputs[key]);
+  if(!isValid){
+    return alert("password must be 6 charachters long")
+  }
+   const auth = getAuth();
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     const user = userCredential.user;
-    alert("Registered Sucessfully")
     window.location="./login.html"
    
   })
@@ -54,5 +71,6 @@ fetch("/",{
 }).catch(err=>{
     console.log(err)
 })
+}
 
 }

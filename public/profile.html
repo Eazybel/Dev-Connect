@@ -3,10 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile Dashboard</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome from CDN for the icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLwFjbcS8Fm8qjC6z8j0a7W3W7DqN3+d9Ff7vFjXyW15z+zK9B1I1i4Qy9B5dG0QcR1/p2s+1zJ2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <h1>PROFILE SECTION</h1>
-    <script src="profile.js"></script>
+<body class="bg-gray-100 min-h-screen p-4 sm:p-8 flex items-center justify-center">
+
+    <!-- Profile Dashboard Container -->
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-2xl">
+        
+        <!-- Top Save Button -->
+        <div class="flex justify-end mb-6">
+            <button id="save" class="bg-green-600 text-white font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-green-700">
+                <i class="fas fa-save mr-2"></i>Save
+            </button>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">My Developer Profile</h2>
+
+        <!-- Profile Header Section with Image and Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-between border-b border-gray-200 pb-6 mb-6 space-y-4 sm:space-y-0">
+            <!-- Profile Image -->
+            <div class="flex items-center space-x-4">
+                <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden border-4 border-white shadow-md">
+                    <img id="profile-img" src="https://placehold.co/96x96/60A5FA/FFFFFF?text=JP" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">John Paul</h3>
+                    <p class="text-sm text-gray-500">Full Stack Developer</p>
+                </div>
+            </div>
+            <!-- Buttons for Profile Photo and General Edit -->
+            <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:w-auto">
+                <button id="change-photo-btn" class="bg-blue-50 text-blue-600 font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-blue-100">
+                    <i class="fas fa-camera mr-2"></i>Change Photo
+                </button>
+                <button id="edit-name" class="bg-blue-600 text-white font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-blue-700">
+                    Edit Profile
+                </button>
+            </div>
+            <input type="file" id="profile-upload" class="hidden" accept="image/*">
+        </div>
+
+        <!-- Personal & Contact Details Section -->
+        <div class="space-y-4 mb-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm text-gray-500">Email</p>
+                    <p class="font-medium text-gray-800">john.paul@example.com</p>
+                </div>
+                <button id="edit-email" class="bg-blue-50 text-blue-600 font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-blue-100">
+                    Edit
+                </button>
+            </div>
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm text-gray-500">Experience</p>
+                    <p class="font-medium text-gray-800">5+ years</p>
+                </div>
+                <button id="edit-experience" class="bg-blue-50 text-blue-600 font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-blue-100">
+                    Edit
+                </button>
+            </div>
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm text-gray-500">Tech Stack</p>
+                    <p class="font-medium text-gray-800">React, Node.js, MongoDB</p>
+                </div>
+                <button id="edit-stack" class="bg-blue-50 text-blue-600 font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-blue-100">
+                    Edit
+                </button>
+            </div>
+        </div>
+
+        <!-- Social Links Section -->
+        <div class="border-t border-gray-200 pt-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Links</h3>
+            <div class="space-y-4">
+                <!-- GitHub URL -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <i class="fab fa-github text-xl text-gray-500"></i>
+                        <a href="#" class="font-medium text-blue-600 hover:underline">github.com/johnpaul</a>
+                    </div>
+                    <button id="edit-github" class="bg-blue-50 text-blue-600 font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-blue-100">
+                        Edit
+                    </button>
+                </div>
+                <!-- LinkedIn URL -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <i class="fab fa-linkedin text-xl text-gray-500"></i>
+                        <a href="#" class="font-medium text-blue-600 hover:underline">linkedin.com/in/johnpaul</a>
+                    </div>
+                    <button id="edit-linkedin" class="bg-blue-50 text-blue-600 font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-blue-100">
+                        Edit
+                    </button>
+                </div>
+                <!-- Portfolio URL -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-briefcase text-xl text-gray-500"></i>
+                        <a href="#" class="font-medium text-blue-600 hover:underline">johnpaul.dev</a>
+                    </div>
+                    <button id="edit-url" class="bg-blue-50 text-blue-600 font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-blue-100">
+                        Edit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <script type="module" src="profile.js"></script>
 </body>
 </html>
